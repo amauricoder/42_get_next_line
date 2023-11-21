@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aconceic <aconceic@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:49:08 by aconceic          #+#    #+#             */
-/*   Updated: 2023/11/21 09:18:11 by aconceic         ###   ########.fr       */
+/*   Updated: 2023/11/21 09:20:06 by aconceic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*read_line(int fd, char *stash)
 {
@@ -97,39 +97,65 @@ char	*update_stash(char *old_stash)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*stash = NULL;
+	static char	*stash[FOPEN_MAX];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (NULL);
-	stash = read_line(fd, stash);
-	if (!stash)
+	stash[fd] = read_line(fd, stash[fd]);
+	if (!stash[fd])
 		return (NULL);
-	line = extract_excedent(stash);
-	stash = update_stash(stash);
+	line = extract_excedent(stash[fd]);
+	stash[fd] = update_stash(stash[fd]);
 	return (line);
 }
-
+/*
 int	main(void)
 {
 	int		fd;
+	int		fd2;
+	int		fd3;
 	int		i;
 	char	*variable;
-
+	char	*variable2;
+	char	*variable3;
+	
 	i = 0;
 	fd = open("test.txt", O_RDONLY);
+	fd2 = open("test2.txt", O_RDONLY);
+	fd3 = open("test3.txt", O_RDONLY);
 	
+	//fd linha 1
 	variable = get_next_line(fd);
-	printf("%s", variable);
+	printf("%s\n", variable);
 	free(variable);
 	
-	while (variable != NULL)
-	{
-		variable = get_next_line(fd);
-		printf("%s", variable);
-		i++;
-		free(variable);
-	}
+	//fd2 linha 1
+	variable2 = get_next_line(fd2);
+	printf("%s\n", variable2);
+	free(variable2);
 	
+	//fd3 linha 1
+	variable3 = get_next_line(fd3);
+	printf("%s\n", variable3);
+	free(variable3);
+	
+	//fd linha 2
+	variable = get_next_line(fd);
+	printf("%s\n", variable);
+	free(variable);
+
+	//fd2 linha 2
+	variable2 = get_next_line(fd2);
+	printf("%s\n", variable2);
+	free(variable2);
+	
+	//fd3 linha 2
+	variable3 = get_next_line(fd3);
+	printf("%s\n", variable3);
+	free(variable3);
+	//close open
 	close(fd);
+	close(fd2);
+	close(fd3);
 	return (0);
-}
+}*/

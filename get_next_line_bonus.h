@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aconceic <aconceic@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:50:02 by aconceic          #+#    #+#             */
-/*   Updated: 2023/11/21 09:19:13 by aconceic         ###   ########.fr       */
+/*   Updated: 2023/11/21 09:20:11 by aconceic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
@@ -22,8 +22,8 @@
 //****************************************************************************//
 # include <stdlib.h> // for mallocs
 # include <unistd.h> //for read()
-//# include <fcntl.h> //for testing purposes, exclude to push
-//# include <stdio.h> //for testing purposes, exclude to push
+# include <stdio.h> //necessary for FOPEN_MAX
+//# include <fcntl.h> //necessary for tests open() flags, exclude to push
 
 //****************************************************************************//
 //                                 Functions                                  //
