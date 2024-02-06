@@ -1,9 +1,41 @@
-# 42_get_next_line
-## What is get_next_line?
+# get_next_line
+
+![Banner](gnl_banner.png "banner get next line")
+
+## Introduction
 This is a project that is part of the 42 common core curriculum.  
 The purpose is to develop a program that reads a line from a file descriptor and returns it.  
 In the bonus part, we essentially need to be able to do this with more than one file descriptor without losing the value of the last one.
-For more details, read the subject.
+For more details, read the [subject](subject/subject.pdf).
+
+## Usage
+
+To use the get_next_line in your project, follow these steps:
+1. Clone the repository
+```bash
+git clone git@github.com:amauricoder/42_get_next_line.git
+```
+2. Compile the files
+```bash
+42_get_next_line % cc -Wall -Wextra -Werror sources/*.c -o get_next_line 
+```
+This will generate the get_next_line file in the root folder.
+
+3. If you want to use as an external function, go to your header file and include the get_next_line.h to your header
+```C
+# include "get_next_line.h"
+```
+
+For Bonus:
+1. Compile the files
+```bash
+42_get_next_line % cc -Wall -Wextra -Werror bonus/*.c -o get_next_line_bonus 
+```
+This will generate the get_next_line_bonus file in the root folder.
+2. 3. If you want to use as an external function, go to your header file and include the get_next_line.h to your header
+```C
+# include "get_next_line_bonus.h"
+```
 
 ## Files within the project
 Please note, while reading the subject, that we have some limitations.
