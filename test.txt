@@ -1,6 +1,11 @@
-Linha 1 document 1
-linha 2 document 1
-linha 3 document 1
-linha 4 document 1
-linha 5 document 1
-linha 6 document 1
+This function will read this line.
+But, not only that line!
+It will read EVERY line!
+Until the end.
+Wanna head a joke? Why do programmers prefer dark mode?
+Because light …
+.
+.
+…
+…..attracts bugs!
+All right, I tried!

@@ -6,7 +6,7 @@
 /*   By: aconceic <aconceic@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:50:02 by aconceic          #+#    #+#             */
-/*   Updated: 2023/11/21 09:19:13 by aconceic         ###   ########.fr       */
+/*   Updated: 2024/02/06 15:57:05 by aconceic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 //****************************************************************************//
 # include <stdlib.h> // for mallocs
 # include <unistd.h> //for read()
-//# include <fcntl.h> //for testing purposes, exclude to push
-//# include <stdio.h> //for testing purposes, exclude to push
+# include <fcntl.h> //for testing purposes, exclude to push
+# include <stdio.h> //for testing purposes, exclude to push
 
 //****************************************************************************//
 //                                 Functions                                  //

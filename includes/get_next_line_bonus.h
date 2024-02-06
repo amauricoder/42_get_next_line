@@ -6,7 +6,7 @@
 /*   By: aconceic <aconceic@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 09:50:02 by aconceic          #+#    #+#             */
-/*   Updated: 2023/11/21 09:20:11 by aconceic         ###   ########.fr       */
+/*   Updated: 2024/02/06 16:00:38 by aconceic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # include <stdlib.h> // for mallocs
 # include <unistd.h> //for read()
 # include <stdio.h> //necessary for FOPEN_MAX
-//# include <fcntl.h> //necessary for tests open() flags, exclude to push
+# include <fcntl.h> //necessary for tests open() flags, exclude to push
 
 //****************************************************************************//
 //                                 Functions                                  //
